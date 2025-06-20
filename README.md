@@ -1,10 +1,3 @@
-Absolutely — here’s a well-structured `README.md` for your **Graphomancer** project. It’s written to be clear for new users while keeping your modular vision and future goals in mind.
-
----
-
-## ✅ `README.md`
-
-```markdown
 # 🧙‍♂️ Graphomancer
 
 Graphomancer is a modular Python + JavaScript library for serializing visualizations into portable JSON schemas, making it easy to generate and share rich, interactive charts from Python (e.g. Matplotlib) into frontend environments (e.g. ECharts, Plotly).
@@ -101,8 +94,3 @@ Currently private. License terms will be determined upon public release.
 ## 🤝 Contributing
 
 Not yet open to contributions — but stay tuned as we stabilize the API and publish our first public spec.
-
-```
-
-Let me know if you'd like a matching `LICENSE` template or GitHub `CONTRIBUTING.md` when you plan to open-source it.
-```
