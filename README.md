@@ -1,2 +1,108 @@
-# graphomancer
-Serialize and deserialize plots
+Absolutely — here’s a well-structured `README.md` for your **Graphomancer** project. It’s written to be clear for new users while keeping your modular vision and future goals in mind.
+
+---
+
+## ✅ `README.md`
+
+```markdown
+# 🧙‍♂️ Graphomancer
+
+Graphomancer is a modular Python + JavaScript library for serializing visualizations into portable JSON schemas, making it easy to generate and share rich, interactive charts from Python (e.g. Matplotlib) into frontend environments (e.g. ECharts, Plotly).
+
+---
+
+## ✨ Features
+
+- 📤 **Serialization of Matplotlib objects** into clean, typed JSON
+- 🧱 **Typed Pydantic schemas** for chart configuration and rendering
+- 🔁 **Frontend-agnostic JSON spec** (supports ECharts, Plotly, etc.)
+- 🧩 **Modular structure** for easy extension to new chart types and engines
+- 🧪 Designed for future integration into [Moloch.run](https://moloch.run) and compatible dashboards
+
+---
+
+## 📦 Repository Structure
+
+```
+graphomancer/
+├── graphomancer/
+│   ├── schemas/                # Pydantic JSON schemas (e.g. line\_schema.py)
+│   ├── serializers/            # Python serializers (e.g. matplotlib -> JSON)
+│   │   └── matplotlib/
+├── examples/                   # Usage examples
+├── tests/                      # Unit tests (to be added)
+├── pyproject.toml              # Project metadata and dependencies
+└── README.md
+````
+
+---
+
+## 🧪 Quickstart
+
+### 1. Install in editable mode
+
+```bash
+git clone https://github.com/yourusername/graphomancer.git
+cd graphomancer
+pip install -e .
+````
+
+### 2. Create a plot and serialize it
+
+```python
+import matplotlib.pyplot as plt
+from graphomancer.serializers.matplotlib.line_serializer import LinePlotMatplotlibSerializer
+
+fig, ax = plt.subplots()
+ax.plot([2000, 2001, 2002], [1.5, 1.8, 2.0], label="USA")
+ax.plot([2000, 2001, 2002], [1.2, 1.4, 1.6], label="Germany")
+
+serializer = LinePlotMatplotlibSerializer(fig, theme="dark", description="GDP over years", source="World Bank")
+schema = serializer.serialize()
+
+print(schema.model_dump_json(indent=2))
+```
+
+---
+
+## 📚 Roadmap
+
+* [x] Line plot schema and Matplotlib serializer
+* [ ] Add support for bar, pie, and scatter plots
+* [ ] Pandas dataframe to JSON
+* [ ] JavaScript rendering engine (ECharts first)
+* [ ] Live chart updates via WebSocket-compatible deltas
+* [ ] Graphomancer as a plugin for [Moloch.run](https://moloch.run)
+* [ ] Public docs and open-source release
+
+---
+
+## ⚙️ Requirements
+
+* Python 3.8+
+* [matplotlib](https://matplotlib.org/)
+* [pydantic](https://docs.pydantic.dev/)
+* numpy
+
+---
+
+## 🧙‍♂️ Why the name?
+
+> Inspired by *Neuromancer* and the arcane magic of data visualization, **Graphomancer** is a conjurer of charts — turning raw Python plots into front-end ready artifacts.
+
+---
+
+## 📝 License
+
+Currently private. License terms will be determined upon public release.
+
+---
+
+## 🤝 Contributing
+
+Not yet open to contributions — but stay tuned as we stabilize the API and publish our first public spec.
+
+```
+
+Let me know if you'd like a matching `LICENSE` template or GitHub `CONTRIBUTING.md` when you plan to open-source it.
+```
