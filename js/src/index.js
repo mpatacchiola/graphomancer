@@ -1,2 +1,3 @@
 // Entry point — extend this as needed
-export * from './renderers/echarts.js'
+export { renderEChartLine } from './renderers/echart/lineRenderer.js';
+// etc.
