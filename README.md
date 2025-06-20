@@ -18,13 +18,25 @@ Graphomancer is a modular Python + JavaScript library for serializing visualizat
 
 ```
 graphomancer/
-├── graphomancer/
-│   ├── schemas/                # Pydantic JSON schemas (e.g. line\_schema.py)
-│   ├── serializers/            # Python serializers (e.g. matplotlib -> JSON)
+├── graphomancer/                      # Python source code
+│   ├── __init__.py
+│   ├── schemas/                       # Pydantic JSON schemas (e.g. line_schema.py)
+│   ├── serializers/                   # Python serializers (e.g. matplotlib -> JSON)
 │   │   └── matplotlib/
-├── examples/                   # Usage examples
-├── tests/                      # Unit tests (to be added)
-├── pyproject.toml              # Project metadata and dependencies
+│   └── ...
+├── js/                                # JavaScript rendering engine (JSON → Chart)
+│   ├── src/
+│   │   ├── index.js                   # JS entry point
+│   │   └── renderers/
+│   │       └── echarts.js            # JSON to EChart renderer
+│   ├── package.json                   # JS project metadata and dependencies
+│   ├── vite.config.js                 # Vite bundler config
+│   └── README.md                      # JS-specific documentation
+├── examples/                          # Usage examples for serialization
+│   └── simple_matplotlib_serialization.py
+├── tests/                             # Unit tests (to be added)
+├── pyproject.toml                     # Python project configuration
+├── .gitignore
 └── README.md
 ````
 
