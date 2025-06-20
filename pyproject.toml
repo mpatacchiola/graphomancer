@@ -1,0 +1,29 @@
+[project]
+name = "graphomancer"
+version = "0.1.0"
+description = "A modular serialization framework for visualizing plots via JSON and JavaScript engines"
+authors = [
+    { name = "Massimiliano Patacchiola", email = "your@email.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "matplotlib>=3.5.0",
+    "pydantic>=2.0",
+    "numpy>=1.22"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",          # or flake8 / black, optional
+    "jupyter"        # if using notebooks
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["examples", "tests"]

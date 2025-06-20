@@ -38,6 +38,8 @@ class LinePlotSchema(BaseModel):
 
     # Optional config
     title: Optional[str] = None
+    description: Optional[str] = None
+    source: Optional[str] = None
     theme: Literal["default", "light", "dark"] = "default"
     xAxis: Optional[XAxisConfig] = XAxisConfig()
     yAxis: Optional[YAxisConfig] = YAxisConfig()
@@ -47,10 +49,12 @@ class LinePlotSchema(BaseModel):
 
     class Config:
         extra = "forbid"
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "type": "line",
                 "title": "GDP Comparison",
+                "description": "A line chart comparing the GDP of USA and Germany from 2000 to 2003.",
+                "source": "World Bank Data",
                 "theme": "dark",
                 "x": [2000, 2001, 2002, 2003],
                 "series": [

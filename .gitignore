@@ -1,0 +1,72 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+.env/
+.envrc
+.venv/
+
+# VSCode project settings
+.vscode/
+.history/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Python egg metadata
+*.egg-info/
+*.egg
+.eggs/
+
+# Build artifacts
+build/
+dist/
+*.log
+
+# Test & coverage
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/
+pytest_cache/
+
+# Installer logs
+pip-log.txt
+
+# mypy and other tooling
+.mypy_cache/
+.pytest_cache/
+.dmypy.json
+.pyre/
+ruff_cache/
+__pypackages__/
+
+# Pydantic schema cache (if used)
+.pydantic/
+
+# Local files
+*.sqlite3
+*.db
+*.csv
+*.json
+*.zip
+*.tar.gz
+*.bak
+*.tmp
+
+# Node-related (in case of frontend or JS/TS experiments)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
